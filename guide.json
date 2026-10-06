@@ -1,0 +1,1847 @@
+{
+  "title": "NEOS User Guide",
+  "version": "5.0",
+  "parts": [
+    {
+      "id": "part1",
+      "kicker": "PART I",
+      "title": "Getting Started",
+      "desc": "Everything you need to know before you begin using NEOS.",
+      "intro": [],
+      "sections": [
+        {
+          "id": "s1",
+          "kicker": "GETTING STARTED",
+          "title": "What is NEOS?",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "NEOS is a comprehensive application designed to help manage and analyze patient authorizations, claims, and transactions over the patient lifecycle. It provides tools for tracking and reviewing data related to these workflows, ensuring efficient E5 workflow management across your organization."
+            },
+            {
+              "type": "P",
+              "text": "NEOS is accessed through the Automation Hub and is designed to work across a range of devices including tablets, desktops, laptops, and other compatible devices."
+            },
+            {
+              "type": "H",
+              "text": "Accessing NEOS"
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Log in to Automation Hub — Navigate to the Automation Hub and log in with your credentials.",
+                "Locate the NEOS icon — Once logged in, look for the NEOS icon in the left panel of the Automation Hub.",
+                "Click to open — The Dashboard is the default landing page after login."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p04-1.png",
+              "cap": "NEOS icon in the Automation Hub left panel",
+              "maxH": "420px"
+            },
+            {
+              "type": "H",
+              "text": "General FAQs"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "What devices support NEOS?",
+                  "NEOS supports Tablet, Desktop, Laptop, and other compatible devices."
+                ],
+                [
+                  "How do I report a bug or request a feature?",
+                  "Contact the support team via the Support icon within the application or by emailing support@e5.ai."
+                ],
+                [
+                  "What do I do if I receive an error message?",
+                  "Follow the instructions provided in the error message. Common errors include network issues, authentication problems, or data loading failures. If the issue persists, contact Element5 support for further assistance."
+                ],
+                [
+                  "How do I exit NEOS and return to the Automation Hub?",
+                  "Close the NEOS window in your browser to return to the Automation Hub."
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "kicker": "PART II",
+      "title": "Global Features",
+      "desc": "Platform tools that work consistently across Authorization, Claims, and all future NEOS modules.",
+      "intro": [
+        {
+          "type": "P",
+          "text": "The features in this section are available throughout the entire NEOS platform. They work the same way whether you are in the Authorization module, the Claims module, or any future module added to NEOS. Learn them once and apply them everywhere."
+        }
+      ],
+      "sections": [
+        {
+          "id": "s2",
+          "kicker": "GLOBAL FEATURES",
+          "title": "Review Mode",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "Review Mode enables users to focus on unresolved tasks by filtering out completed items, showing only those that require attention. This streamlines workflows by helping your team prioritize action items, improving efficiency and ensuring no critical tasks are overlooked."
+            },
+            {
+              "type": "P",
+              "text": "Review Mode is available in all Authorization and Claims views. Enable it by clicking the Review Mode toggle in the top right of any view within the relevant module."
+            },
+            {
+              "type": "Img",
+              "src": "images/p05-1.jpg",
+              "cap": "Review Mode toggle in the top right of the view"
+            },
+            {
+              "type": "L",
+              "text": "HOW REVIEW MODE WORKS"
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Select a view — Navigate to any Authorization or Claims Center view — Dashboards, Auth Request View, Patient Auth Summary View, Claims Batch View, or Claims Status View.",
+                "Enable Review Mode — Click the Review Mode toggle. The view will immediately filter to show only records requiring your attention.",
+                "Work through your queue — Records are automatically filtered and sorted, highlighting those that need action. Focus on critical tasks without distraction.",
+                "Mark items as reviewed — Check the Reviewed? checkbox next to any record once you have actioned it. The item drops off the Review Mode list immediately.",
+                "Toggle off — Turn Review Mode off at any time to return to the full unfiltered view."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "WHAT GETS FILTERED — BY PROCESS"
+            },
+            {
+              "type": "H",
+              "text": "Authorizations"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Auth Status — Partially Approved, Denied, Pending (>10 days), Exceptions",
+                "AT Status — Needs Attention, Needs Intervention",
+                "Patient Summary — Expiring episodes, Expiring auths"
+              ]
+            },
+            {
+              "type": "H",
+              "text": "Claims"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Batch View — Rejected batches, Batch Exceptions",
+                "Claims Status — Payor Rejected, Exceptions, Timely Filing Untimely",
+                "AT Status — Needs Attention, Needs Intervention"
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "note",
+              "text": "Once a record is marked as reviewed it cannot be unchecked. Only records that have not yet been reviewed will be pulled into this view when the feature is toggled on to allow attention only on items still requiring end user attention."
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "kicker": "GLOBAL FEATURES",
+          "title": "Sort & Filter",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "Sorting and filtering tools are available across all NEOS views and dashboards, giving you precise control over the data you see. Filters applied globally persist as you move between views within a module."
+            },
+            {
+              "type": "H",
+              "text": "Sorting"
+            },
+            {
+              "type": "P",
+              "text": "Sorting helps you organize data in a meaningful way, making it easier to find the information you need."
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Click any column header to sort the data by that column in ascending order.",
+                "Click again to toggle between ascending and descending order.",
+                "Combine with filters — apply filters first to narrow down the data, then sort to organize the results for easier analysis."
+              ]
+            },
+            {
+              "type": "H",
+              "text": "Global Level Filters"
+            },
+            {
+              "type": "P",
+              "text": "Global Level Filters are applied across all views and dashboards within a module, providing consistent filtering across different sections."
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Access filters — Click the Add More Filters button at the top of any view to open the filter panel.",
+                "Select filter fields — Choose from available attributes such as Payor Type, Gateway, Branch, Payor Source, and Mode.",
+                "Set values — Select one or more values for each filter field.",
+                "Add more criteria — Click Add More within the filter menu to stack multiple filter conditions.",
+                "Apply — Click Apply Filter. The filter will take effect across all views within the module.",
+                "Remove a filter — Click the X next to any active filter chip, or clear all criteria and click Apply Filter."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p07-1.jpg",
+              "cap": "Auth Initiated Date and Add More Filters panel"
+            },
+            {
+              "type": "Note",
+              "kind": "tip",
+              "text": "The Auth Initiated Date (Authorization) and Claim Init. Date (Claims) filters persist as you navigate between views within a module."
+            },
+            {
+              "type": "H",
+              "text": "Exclude Non-Requested Auths"
+            },
+            {
+              "type": "P",
+              "text": "Available in Authorization views. When checked, authorization transactions that do not warrant a portal request are removed from the details grid and summary counts adjust automatically. When Review Mode is active, this checkbox becomes greyed out and non-clickable."
+            },
+            {
+              "type": "Img",
+              "src": "images/p08-1.jpg",
+              "cap": "Exclude Non-Req Auths checkbox",
+              "maxH": "300px"
+            },
+            {
+              "type": "H",
+              "text": "Search"
+            },
+            {
+              "type": "P",
+              "text": "Every view includes a Search Patient Records bar that searches across key identifiers. In Authorization views you can search by patient name, E5 ID, MRN, Episode ID, or Member ID. In Claims views you can also search by Claim ID."
+            },
+            {
+              "type": "Img",
+              "src": "images/p08-2.jpg",
+              "cap": "Search Patient Records bar",
+              "maxH": "240px"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "kicker": "GLOBAL FEATURES",
+          "title": "Automation Log",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The Automation Log is available within every NEOS module and displays a comprehensive list of all automation transactions for the workflows in that module. It gives you full visibility into each step of the workflow lifecycle — including transaction IDs, workflow names, current stages, and automation outcomes."
+            },
+            {
+              "type": "P",
+              "text": "Use the Automation Log to investigate workflow failures, review retry history, and understand why a transaction ended up in a Needs Attention or Needs Intervention state. Access it via the Automation Log tab within any module's center view."
+            },
+            {
+              "type": "Img",
+              "src": "images/p09-1.jpg",
+              "cap": "Automation Log tab"
+            },
+            {
+              "type": "L",
+              "text": "COMMON FIELDS ACROSS ALL MODULES"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "E5 ID",
+                  "Unique internal identifier for this automation transaction. Clickable — opens full transaction detail."
+                ],
+                [
+                  "Workflow",
+                  "The name of the automation workflow that processed this transaction."
+                ],
+                [
+                  "Current Stage",
+                  "The specific stage within the workflow at which this transaction currently sits."
+                ],
+                [
+                  "Patient Name",
+                  "Full name of the patient associated with this transaction."
+                ],
+                [
+                  "MRN",
+                  "Medical Record Number of the patient."
+                ],
+                [
+                  "Member ID",
+                  "The patient's payor or insurance Member ID."
+                ],
+                [
+                  "Payor Source",
+                  "The payor source for this patient."
+                ],
+                [
+                  "Gateway",
+                  "The clearinghouse or gateway through which the transaction was processed."
+                ],
+                [
+                  "SVC / SVC Type",
+                  "Service type associated with this transaction."
+                ],
+                [
+                  "Retry",
+                  "Number of times the automation workflow attempted to complete this transaction."
+                ],
+                [
+                  "Start Time",
+                  "The time the automation workflow began processing."
+                ],
+                [
+                  "End Time",
+                  "The time the automation workflow completed or stopped."
+                ],
+                [
+                  "AT Status",
+                  "The automation status of this transaction."
+                ],
+                [
+                  "Comments",
+                  "System-generated context for the automation outcome (e.g. denial reason, needs attention reason)."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "AT STATUS DEFINITIONS"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Completed",
+                  "The automation has successfully completed the transaction according to the defined workflow."
+                ],
+                [
+                  "Needs Intervention",
+                  "Manual intervention is required for the transaction to proceed. If the maximum retry limit is reached, it will move to Terminated."
+                ],
+                [
+                  "Needs Attention — Terminated",
+                  "The transaction was terminated by the automation based on business rules after all retry attempts were exhausted."
+                ],
+                [
+                  "Needs Attention — Failed",
+                  "The transaction failed due to a technical issue and has reached the maximum retry count."
+                ],
+                [
+                  "In Progress",
+                  "The transaction is currently being processed by the automation through all allowable retry attempts."
+                ]
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "note",
+              "text": "The Claims Automation Log includes an additional field: Batch E5 ID (the parent batch identifier). This is specific to the Claims module. All other fields and behaviors are identical."
+            },
+            {
+              "type": "L",
+              "text": "AUTOMATION LOG FAQS"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "What is the difference between Terminated and Failed?",
+                  "Terminated — Needs Attention means the automation stopped based on a business rule after exhausting all retry attempts. Failed — Needs Attention means a technical issue caused the transaction to fail. Both require human review but for different reasons — Terminated items are business exceptions while Failed items are technical exceptions."
+                ],
+                [
+                  "How do I find all transactions for a specific patient or batch?",
+                  "Use the Search Patient Records bar in the Automation Log to search by patient name, MRN, Member ID, or E5 ID. In the Claims module you can also search by Batch E5 ID to find all transactions associated with a specific batch."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "kicker": "GLOBAL FEATURES",
+          "title": "Reporting",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The Reporting feature gives your team direct access to NEOS workflow data — enabling you to extract, filter, and analyze records outside of the platform. Reports are generated on demand and delivered securely via email, ready for download and further analysis in the tool of your choice."
+            },
+            {
+              "type": "P",
+              "text": "The Reports icon is always visible in the top-right corner of the NEOS navigation bar, regardless of which screen or workflow you are currently working in. You never need to navigate away from your current task to generate a report."
+            },
+            {
+              "type": "L",
+              "text": "KEY CAPABILITIES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Flexible Filtering: Apply date range, gateway, branch, and payer source filters to scope your report precisely to the data that matters.",
+                "Customizable Fields: Select only the data fields relevant to your analysis using simple toggle checkboxes.",
+                "On-Demand Generation: Generate reports at any time from any screen in NEOS without disrupting your current workflow.",
+                "Secure Email Delivery: Reports are delivered via a secure, time-limited email link — ready for download within minutes."
+              ]
+            },
+            {
+              "type": "H",
+              "text": "How to Generate a Report"
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Locate the Reports icon — Look for the Reports icon in the top-right corner of the NEOS navigation bar. It is always visible regardless of which screen you are on. Click it to get started."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p11-1.jpg",
+              "cap": "Reports icon in the top-right navigation bar"
+            },
+            {
+              "type": "Steps",
+              "start": 2,
+              "items": [
+                "Open the Reporting panel — A slide-out panel will appear from the right side of the screen. This panel layers over your current view so you never lose your place in NEOS. Review the available sections before making selections.",
+                "Select a process — Click the process selector and choose the process you want to report on (e.g. Authorizations). This tells the system which workflow dataset to pull from.",
+                "Apply filters — Apply one or more filters to refine the data included in your report. You can use any combination of filters or leave them at their defaults for a broader dataset.",
+                "Select fields — Scroll to the field selection area. Use the checkboxes next to each field to toggle them on or off. Checked fields will appear as columns in the generated report."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p12-2.jpg",
+              "cap": "Reporting panel — process, filters, and field selection",
+              "maxH": "560px"
+            },
+            {
+              "type": "Steps",
+              "start": 6,
+              "items": [
+                "Generate the report — Click Generate Report at the bottom of the panel. The system will begin compiling your report. An on-screen acknowledgment confirms the report is in progress. You can close the panel and continue working while the report is prepared."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p12-1.jpg",
+              "cap": "Report request confirmation",
+              "maxH": "320px"
+            },
+            {
+              "type": "Steps",
+              "start": 7,
+              "items": [
+                "Download via email — When your report is ready you will receive an automated email to your registered address containing a secure download link. Click the link to download the file immediately."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p13-1.jpg",
+              "cap": "Report ready email",
+              "maxH": "none"
+            },
+            {
+              "type": "Img",
+              "src": "images/p13-2.jpg",
+              "cap": "Patient Transactions Report email",
+              "maxH": "none"
+            },
+            {
+              "type": "L",
+              "text": "AVAILABLE FILTERS"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Date Range",
+                  "Specify the time period for the report."
+                ],
+                [
+                  "Gateway",
+                  "Filter by authorization or claims gateway."
+                ],
+                [
+                  "Branch",
+                  "Narrow results to specific branch locations."
+                ],
+                [
+                  "Payor Source",
+                  "Filter by records assigned to a specific payor."
+                ],
+                [
+                  "Service Line",
+                  "Narrow records by service line with applicable processes."
+                ],
+                [
+                  "Claim Type",
+                  "Narrow claim records by claim type."
+                ]
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "important",
+              "text": "The secure download link in your email is valid for 30 minutes from the time it is sent. If the link expires before you access it, return to NEOS, reopen the Reports panel, reapply your settings, and click Generate Report again to receive a new link."
+            },
+            {
+              "type": "L",
+              "text": "REPORTING FAQS"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "How long does it take to receive my report?",
+                  "Reports are typically ready within minutes of generation. You will receive an automated email to your registered address when the report is ready for download. The delivery time can vary based on the size of the data extracted from the system."
+                ],
+                [
+                  "What happens if my download link expires?",
+                  "Secure download links are valid for 30 minutes. If your link expires, return to NEOS, reopen the Reports panel, reapply your settings, and click Generate Report to receive a new link."
+                ],
+                [
+                  "Can I access the Reports panel from any screen?",
+                  "Yes — the Reports icon is always visible in the top-right navigation bar regardless of which screen or module you are currently working in. You do not need to navigate away from your current task."
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part3",
+      "kicker": "PART III",
+      "title": "Managing Authorizations in NEOS",
+      "desc": "Managing patient authorizations, tracking requests, and monitoring automation outcomes.",
+      "intro": [
+        {
+          "type": "Note",
+          "kind": "platform",
+          "text": "Review Mode, Sort & Filter, Automation Log, and Reporting all apply to this module — see Part II: Global Features for full guidance on each."
+        }
+      ],
+      "sections": [
+        {
+          "id": "s6",
+          "kicker": "AUTHORIZATION",
+          "title": "Authorization Dashboard",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The Authorization Dashboard is your starting point each day. It provides a comprehensive view of key authorization metrics, trend data, and actionable items — giving your team immediate visibility into what needs attention."
+            },
+            {
+              "type": "P",
+              "text": "Access the Dashboard by clicking the NEOS tab in the side panel of the Automation Hub, or by selecting the Authorization sub-tab at the top of any NEOS screen."
+            },
+            {
+              "type": "Img",
+              "src": "images/p15-1.jpg",
+              "cap": "Authorization Dashboard"
+            },
+            {
+              "type": "L",
+              "text": "KEY FEATURES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Auth Request Status Summary: A quick snapshot of important metrics including Requested, Approved, Denied, Pending, Partially Approved, Exceptions, and Non-Req Auths.",
+                "Auth Line Summary — Visit Level Trends: Visual charts showing authorization volume and approval trends over time, filterable by service type, gateway, diagnosis code, and payor type.",
+                "Action Items: Lists Payor Auth Request and response tasks requiring immediate attention, plus Automation Action Items where the automation could not complete the lifecycle. All items are clickable and navigate directly to the relevant records.",
+                "Add More Filters: Customize the data displayed based on various categories and the auth-initiated date period."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "AUTH REQUEST STATUS — DEFINITIONS"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Requested",
+                  "Total number of all authorization requests."
+                ],
+                [
+                  "Approved",
+                  "Total number of all fully approved authorization requests."
+                ],
+                [
+                  "Denied",
+                  "Total number of all denied authorization requests. Includes Cancelled, Contact Payor, and Term Expired."
+                ],
+                [
+                  "Pending",
+                  "Total number of all submitted requests awaiting a response."
+                ],
+                [
+                  "Partially Approved",
+                  "Total number of requests that received partial approval (some services approved, others denied)."
+                ],
+                [
+                  "Exceptions",
+                  "Total number of requests marked as Modified, No Action Required, Complete, Submission Exception, and No Auth/Referral required."
+                ],
+                [
+                  "Non-Req Auths",
+                  "Placeholder auth requests placed in the EHR and Submission not required cases that do not warrant portal requests."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "ACTION ITEMS"
+            },
+            {
+              "type": "P",
+              "text": "Action Items are divided into two categories:"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Payor Auth Request & Response Action Items: Tasks based on the payor's responses — denied, partially approved, or pending requests needing follow-up.",
+                "Automation Action Items: Flags issues identified through automation audits such as member ID mismatches or missing patient records. Divided into Needs Attention and Needs Intervention tabs. All items are clickable."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p16-1.jpg",
+              "cap": "Action Items panel",
+              "maxH": "520px"
+            },
+            {
+              "type": "L",
+              "text": "DASHBOARD FAQS"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "How do I view Action Items?",
+                  "Click on any item under the Action Items section. This navigates you directly to the relevant subset of records in the Authorization views."
+                ],
+                [
+                  "What happens when I complete an Action Item?",
+                  "Once an Action Item is marked as reviewed in the Authorization view, it will disappear from the Action Items list and no longer be pulled into Review Mode."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "kicker": "AUTHORIZATION",
+          "title": "Authorization Views",
+          "blocks": [
+            {
+              "type": "Sub",
+              "id": "s7a",
+              "kicker": "AUTHORIZATION CENTER · PATIENT AUTH SUMMARY VIEW",
+              "text": "Patient Auth Summary View"
+            },
+            {
+              "type": "P",
+              "text": "The Patient Auth Summary View offers a comprehensive overview of patient authorizations, allowing users to easily access and understand key details about episode authorization summaries, recertification statuses, and upcoming expiration of authorizations."
+            },
+            {
+              "type": "Img",
+              "src": "images/p18-1.jpg",
+              "cap": "Patient Auth Summary View"
+            },
+            {
+              "type": "L",
+              "text": "KEY FEATURES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Filters: Customize the view by Payor Source, Payor Type, Gateway, Branch, Mode, and Recert Status.",
+                "Search Patient Records: Search across Patient Name, E5 ID, Member ID, MRN, and Episode ID.",
+                "Clickable Summary Status: All Patients, Past Due For Recert, Due For Recert, Expiring Auths, and Expired Auths counts are clickable and filter the grid accordingly."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Patient Name",
+                  "Patient full name in EHR."
+                ],
+                [
+                  "Patient MRN",
+                  "Medical Record Number in EHR."
+                ],
+                [
+                  "Branch",
+                  "Branch code from EHR for the home health agency."
+                ],
+                [
+                  "Member ID",
+                  "Patient's payor/insurance member ID/Policy ID."
+                ],
+                [
+                  "Payor Source",
+                  "Payor source of the patient as in EHR."
+                ],
+                [
+                  "Payer Type",
+                  "Payor type of the patient as in EHR."
+                ],
+                [
+                  "Gateway",
+                  "Gateway through which the Auth request is submitted."
+                ],
+                [
+                  "Mode",
+                  "Mode of submission: Electronic, Fax, Email, Phone etc."
+                ],
+                [
+                  "SOC Date",
+                  "Start of care for the patient."
+                ],
+                [
+                  "Epi St Date",
+                  "Current episode start date of the patient."
+                ],
+                [
+                  "Episode ID",
+                  "Current episode ID of the patient."
+                ],
+                [
+                  "Placeholder (PH) Auth",
+                  "Total count of Placeholder auths placed in the EHR."
+                ],
+                [
+                  "Episode Auth Summary (Current)",
+                  "Rolled up units for all requested, approved, denied, and pending status at an episode level."
+                ],
+                [
+                  "Recert Status",
+                  "Status of the episode: Current, Past due for recert, Expired, Expiring."
+                ],
+                [
+                  "Expiring Auth",
+                  "Number of expiring auths in the next 7 days."
+                ],
+                [
+                  "Expired Auth",
+                  "Number of auths expired."
+                ],
+                [
+                  "Reviewed?",
+                  "Check off once reviewed when marked as Needs Attention or Needs Intervention."
+                ]
+              ]
+            },
+            {
+              "type": "Sub",
+              "id": "s7b",
+              "kicker": "AUTHORIZATION CENTER · AUTH REQUEST VIEW",
+              "text": "Auth Request View"
+            },
+            {
+              "type": "P",
+              "text": "The Auth Request View displays in-depth information for each authorization request. Users can toggle between Group by Auth Request and Auth by Service Type to see all service types per request or break down by specific service lines."
+            },
+            {
+              "type": "P",
+              "text": "Key dates visible include the authorization initiation date, submission date, and payer response date — giving a complete picture of the request lifecycle."
+            },
+            {
+              "type": "Img",
+              "src": "images/p20-1.jpg",
+              "cap": "Auth Request View"
+            },
+            {
+              "type": "L",
+              "text": "KEY FEATURES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Toggle views: Switch between Group by Auth Request and Auth by Service Type using the toggle.",
+                "Clickable Summary Status: All Request, Approved, Partially Approved, Denied, Pending, Exceptions, and Non-Req Auths counts are all clickable and will bring you to that subset of records carrying that status.",
+                "Dropdown detail: Click a patient row to expand and see the E5 ID plus a direct link to View Automation Log for that specific auth request.",
+                "Column organization: Filter and organise columns at the field level."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY — GROUP BY AUTH REQUEST"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Patient Name",
+                  "Patient full name in EHR."
+                ],
+                [
+                  "MRN",
+                  "Medical Record Number in EHR."
+                ],
+                [
+                  "Member ID",
+                  "Patient's payor/insurance member ID/Policy ID."
+                ],
+                [
+                  "Branch",
+                  "Branch of the patient as in EHR."
+                ],
+                [
+                  "Payer Source",
+                  "Payor Source of the patient as in EHR."
+                ],
+                [
+                  "Gateway",
+                  "Gateway through which the Auth request is submitted."
+                ],
+                [
+                  "Episode ID",
+                  "Current episode ID of the patient."
+                ],
+                [
+                  "Auth Type",
+                  "Auth type: Initial, Recert, Addnl, Reauth, Non-Req Auth."
+                ],
+                [
+                  "Auth Initiated Date",
+                  "Auth request initiated date."
+                ],
+                [
+                  "Auth Submission Date",
+                  "Auth request submission date."
+                ],
+                [
+                  "Authorization#",
+                  "Payer authorization number(s) for the submitted request."
+                ],
+                [
+                  "Placeholder (PH) Auth",
+                  "Total count of Placeholder auths placed in the EHR."
+                ],
+                [
+                  "Auth Request Summary",
+                  "Rolled up status of all requested, approved, denied, pending across all service lines in the Auth request."
+                ],
+                [
+                  "Pyr Response Date",
+                  "Date the payer responded to the Auth request."
+                ],
+                [
+                  "EHR Sync",
+                  "Was EHR writeback successful?"
+                ],
+                [
+                  "AT Status",
+                  "Automation status of the workflow transaction along with comments."
+                ],
+                [
+                  "Auth Status",
+                  "Auth Status for the request submitted to a payer along with comments."
+                ],
+                [
+                  "Docs",
+                  "Documents attached during the request and received as part of the payor's response."
+                ],
+                [
+                  "Reviewed?",
+                  "Check off once reviewed when marked as Needs Attention or Needs Intervention."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY — GROUP BY SERVICE TYPE"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "E5 ID",
+                  "Internal E5 Auth Parent ID for an Auth transaction (E5 internal purpose only)."
+                ],
+                [
+                  "SVC",
+                  "Service type for which Auth is submitted."
+                ],
+                [
+                  "Authorization#",
+                  "Payer authorization number(s) for the submitted request."
+                ],
+                [
+                  "Approval Start Date",
+                  "Auth Start Date."
+                ],
+                [
+                  "Approval End Date",
+                  "Auth End Date."
+                ],
+                [
+                  "SVC Auth Status",
+                  "Service type Authorization status: Fully Approved / Partially Approved / Pending / Denied."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "AUTH REQUEST VIEW FAQS"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "What is the E5 ID and Authorization#?",
+                  [
+                    "E5 ID: The unique internal identifier for the specific authorization request within NEOS.",
+                    "Authorization#: The authorization ID provided by the payor or insurance company for the request."
+                  ]
+                ],
+                [
+                  "Can I uncheck a record I marked as reviewed?",
+                  "No — once a record is marked as reviewed it cannot be unchecked. Contact support@e5.ai if you need assistance."
+                ]
+              ]
+            },
+            {
+              "type": "Sub",
+              "id": "s7c",
+              "kicker": "AUTHORIZATION CENTER · PATIENT DETAILED SCREEN",
+              "text": "Patient Detailed Screen"
+            },
+            {
+              "type": "P",
+              "text": "The Patient Detailed Screen provides a comprehensive view of a patient's medical information, focusing on authorizations related to their care episodes. Access it by clicking a patient name in any Authorization view."
+            },
+            {
+              "type": "P",
+              "text": "The screen displays essential patient information including name, date of birth, MRN, and payer details, along with referral details, provider information, diagnosis, and authorization tracking."
+            },
+            {
+              "type": "Img",
+              "src": "images/p22-1.jpg",
+              "cap": "Patient Detailed Screen"
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Patient Name",
+                  "Full name of the patient."
+                ],
+                [
+                  "MRN",
+                  "Medical Record Number assigned to the patient."
+                ],
+                [
+                  "DOB",
+                  "Date of birth of the patient."
+                ],
+                [
+                  "Mem ID",
+                  "Membership ID used for insurance or care purposes."
+                ],
+                [
+                  "Relationship to Subscriber",
+                  "Patient's relationship to subscriber for insurance."
+                ],
+                [
+                  "Payor Name",
+                  "Primary payer with whom the patient is enrolled."
+                ],
+                [
+                  "Payor Source",
+                  "The patient's insurance provider."
+                ],
+                [
+                  "Payor Type",
+                  "Type of insurance (e.g. Medicare Managed Care Per Visit)."
+                ],
+                [
+                  "Gateway",
+                  "Gateway through which the Auth request is submitted."
+                ],
+                [
+                  "SOC",
+                  "Start of care date."
+                ],
+                [
+                  "Referral Source",
+                  "Indicates where the referral came from (e.g. Facility)."
+                ],
+                [
+                  "Referral Entity",
+                  "The entity responsible for the referral."
+                ],
+                [
+                  "Referral Date",
+                  "Date when the referral was made."
+                ],
+                [
+                  "Episode Start & End Date",
+                  "Start and end date of the patient's care episode."
+                ],
+                [
+                  "Days to Recert",
+                  "Number of days remaining before the episode expires."
+                ],
+                [
+                  "Ordering Provider",
+                  "Provider name, NPI, Address, City, State, Zipcode."
+                ],
+                [
+                  "Service Provider",
+                  "Agency name, NPI, Facility address, City, State, Zipcode, Contact name, Contact phone."
+                ],
+                [
+                  "Diagnosis Code",
+                  "Medical diagnosis code (ICD-10 format)."
+                ],
+                [
+                  "Diagnosis Description",
+                  "Description of the patient's diagnosis."
+                ],
+                [
+                  "SVC",
+                  "Service type for which Auth is submitted."
+                ],
+                [
+                  "E5 ID",
+                  "Internal E5 Auth Parent ID for an Auth transaction."
+                ],
+                [
+                  "Authorization #",
+                  "The authorization number for tracking approvals."
+                ],
+                [
+                  "Auth Tracking #",
+                  "A unique number for tracking authorization requests."
+                ],
+                [
+                  "Auth Init Dt",
+                  "Initial date when the authorization was created."
+                ],
+                [
+                  "Auth Sub Date",
+                  "Date when the authorization request was submitted."
+                ],
+                [
+                  "Auth Req Start & End Date",
+                  "The requested start and end dates for the service authorization."
+                ],
+                [
+                  "Pyr Response Date",
+                  "Date the payer responded to the Auth request."
+                ],
+                [
+                  "Auth Approval Start and End Date",
+                  "Auth approved start and end date."
+                ],
+                [
+                  "Auth Request Summary",
+                  "Count of requested, approved, denied, pending status across all service lines."
+                ],
+                [
+                  "Days to Expire",
+                  "Number of days left before the authorization expires."
+                ],
+                [
+                  "EHR Sync",
+                  "Shows if the authorization is synced with the Electronic Health Record system."
+                ],
+                [
+                  "Auth Status",
+                  "Current status of the authorization request (e.g. Pending, Approved, Denied)."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "kicker": "AUTHORIZATION",
+          "title": "Document Management",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The Document Management feature allows users to view and manage documents linked to specific authorization requests. It is accessible via the clipboard icon in the Auth Request View grid, or through the Patient Detailed Screen."
+            },
+            {
+              "type": "L",
+              "text": "ACCESSING DOCUMENTS"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Option 1: Click the clipboard icon in the Auth Request View grid to open the Document Management page directly.",
+                "Option 2: View through the Patient Detailed Screen."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "DOCUMENT TABS"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Request Docs: Documents submitted as part of the authorization request. Includes documents with the Auth initiated date.",
+                "Response Docs: Documents received in response to the authorization request. Includes documents with the Payer response date."
+              ]
+            },
+            {
+              "type": "P",
+              "text": "At the top of the Documents section you will see the E5 ID, Auth#, Auth Type, and Service Type for context. To view a document click the View link next to its name — it will open in a new window."
+            },
+            {
+              "type": "Img",
+              "src": "images/p25-1.jpg",
+              "cap": "Documents panel — Request Docs and Response Docs",
+              "maxH": "520px"
+            },
+            {
+              "type": "L",
+              "text": "DOCUMENT MANAGEMENT FAQS"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "What do the different tabs in the Documents section mean?",
+                  [
+                    "Request Docs: Documents submitted as part of the initial authorization request.",
+                    "Response Docs: Documents received in response to the authorization request."
+                  ]
+                ],
+                [
+                  "What should I do if a document is missing or not displaying correctly?",
+                  "Verify that it was successfully uploaded during the authorization request process. If issues persist, contact the Element5 support team at support@e5.ai."
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part4",
+      "kicker": "PART IV",
+      "title": "Managing Claims in NEOS",
+      "desc": "Managing claim submissions, tracking batches through the clearinghouse pipeline, and monitoring payor responses.",
+      "intro": [
+        {
+          "type": "Note",
+          "kind": "platform",
+          "text": "Review Mode, Sort & Filter, Automation Log, and Reporting all apply to this module — see Part II: Global Features for full guidance on each."
+        }
+      ],
+      "sections": [
+        {
+          "id": "s9",
+          "kicker": "CLAIMS",
+          "title": "What is Claims in NEOS?",
+          "toc": "Claims Overview",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The Claims module is a dedicated workspace within NEOS that gives your team full visibility into every claim submitted on behalf of your patients. Claims lives in its own top-level tab alongside Authorization, accessible from the main NEOS navigation bar."
+            },
+            {
+              "type": "P",
+              "text": "At its core, Claims tracks each submission through a three-stage pipeline — from the moment a batch is transmitted, through clearinghouse validation, and ultimately to payor-level acceptance and payment."
+            },
+            {
+              "type": "H",
+              "text": "The Three-Stage Claim Pipeline"
+            },
+            {
+              "type": "Cards",
+              "items": [
+                {
+                  "k": "STAGE 1",
+                  "t": "Clearing House",
+                  "d": "Confirms whether a submitted batch was successfully received and accepted or rejected at the clearinghouse level."
+                },
+                {
+                  "k": "STAGE 2",
+                  "t": "Pre-Payor",
+                  "d": "Tracks clearinghouse-level acceptance or rejection of individual claims before they are forwarded to the payor."
+                },
+                {
+                  "k": "STAGE 3",
+                  "t": "Payor",
+                  "d": "Reflects the payor's final response — whether the claim is pending, accepted, rejected, or flagged as an exception."
+                }
+              ]
+            },
+            {
+              "type": "H",
+              "text": "Understanding Claim Types"
+            },
+            {
+              "type": "P",
+              "text": "NEOS handles several distinct claim types, each representing a different point in the patient care and billing process."
+            },
+            {
+              "type": "Cards",
+              "items": [
+                {
+                  "k": "NOE",
+                  "t": "Notice of Election",
+                  "d": "Hospice-specific notification submitted to Medicare when a patient elects hospice care. Required to initiate the hospice billing period. Not a payment claim."
+                },
+                {
+                  "k": "NOTR",
+                  "t": "Notice of Termination / Revocation",
+                  "d": "Hospice-specific notification submitted to Medicare when a patient's hospice election ends. Required to close the care period for billing."
+                },
+                {
+                  "k": "NOA",
+                  "t": "Notice of Admission",
+                  "d": "Home health-specific notification submitted to Medicare at the start of a home health episode. Required before a final claim can be submitted."
+                },
+                {
+                  "k": "CLAIM",
+                  "t": "Final Claim",
+                  "d": "The actual billing claim submitted to the payor requesting payment for services rendered. Contains a full service line breakdown."
+                }
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "tip",
+              "text": "NOE, NOTR, and NOA are Medicare notifications, not payment requests. They carry their own timely filing requirements and will surface as action items if submissions fall outside the required window."
+            },
+            {
+              "type": "H",
+              "text": "Timely Filing"
+            },
+            {
+              "type": "P",
+              "text": "Timely filing refers to the requirement that certain claim types — particularly NOE, NOTR, and NOA notifications — must be submitted within a five-day window from the relevant event date. NEOS tracks this automatically and flags any claims approaching or past their deadline."
+            },
+            {
+              "type": "Note",
+              "kind": "important",
+              "text": "Claims flagged as Untimely indicate submissions that did not meet the required filing window. These should be reviewed and actioned promptly to avoid compliance issues."
+            }
+          ]
+        },
+        {
+          "id": "s10",
+          "kicker": "CLAIMS",
+          "title": "Claims Dashboard",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The Claims Dashboard is your starting point each day for the Claims module. It provides a consolidated view of batch and claim-level performance, surfacing trends, filing compliance, and items requiring your immediate attention."
+            },
+            {
+              "type": "P",
+              "text": "Access by selecting the Claims tab in the main navigation, then ensuring the Claims sub-tab is active alongside the Authorization sub-tab."
+            },
+            {
+              "type": "Img",
+              "src": "images/p29-1.jpg",
+              "cap": "Claims Dashboard"
+            },
+            {
+              "type": "L",
+              "text": "KEY FEATURES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Batch Status Summary: A snapshot of all batches submitted — total batches, clearinghouse-accepted, clearinghouse-rejected, and batch exceptions.",
+                "Claim Status Summary: A claim-level breakdown tracking individual claims across all three pipeline stages.",
+                "Claim Level Trends: Visual charts including claim level status over time, claim type distribution by volume or value, payor type distribution, submission and charge trends, and the Timely Filing Tracker.",
+                "Action Items Panel: Divided into Claims Action Items (outcome-based) and Automation Action Items (workflow issues). All items are clickable and navigate directly to the relevant records."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "BATCH STATUS SUMMARY — DEFINITIONS"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Total Batch Submitted",
+                  "The total number of claim batches submitted within the selected date range."
+                ],
+                [
+                  "CH Accepted Batches",
+                  "Batches successfully submitted to the clearinghouse."
+                ],
+                [
+                  "CH Rejected Batches",
+                  "Batches not successfully submitted to the clearinghouse. Require review and resubmission."
+                ],
+                [
+                  "Batch Exceptions",
+                  "Batches where an issue occurred at the transmission level and did not reach the clearinghouse. Distinct from claim-level exceptions."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "CLAIMS ACTION ITEMS"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "NOE / NOA / NOTR Filing — Untimely: Notifications submitted outside the required five-day window.",
+                "Payor Rejections: Claims forwarded to the payor that the payor subsequently rejected.",
+                "Batch Exceptions: Batches where a transmission-level issue prevented normal processing.",
+                "Batch Rejections: Batches not accepted by the clearinghouse."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p30-1.jpg",
+              "cap": "Claims Action Items panel",
+              "maxH": "560px"
+            },
+            {
+              "type": "Note",
+              "kind": "note",
+              "text": "All action items are clickable — selecting any item navigates directly to the subset of records carrying that status in the Claims Center."
+            },
+            {
+              "type": "L",
+              "text": "HOW TO USE THE CLAIMS DASHBOARD"
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Review Action Items first — Prioritise untimely filing flags and payor rejections — these carry the most immediate compliance and revenue risk.",
+                "Adjust the date range — Use the Claim Init. Date filter to expand or narrow the time window.",
+                "Analyze trends — Use the Claim Level Trends charts to understand submission volume, claim type distribution, and timely filing performance.",
+                "Drill into records — Click any action item count or summary status to navigate to that specific subset of records in the Claims Center to review or provide needed interventions."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "DASHBOARD FILTERS"
+            },
+            {
+              "type": "P",
+              "text": "Click Add More Filters to open the filter panel. Select a Filter Field and corresponding values, then click Apply Filter. Filters apply across the entire Claims Dashboard for the selected date range."
+            },
+            {
+              "type": "Img",
+              "src": "images/p31-1.jpg",
+              "cap": "Claims Dashboard filter panel"
+            }
+          ]
+        },
+        {
+          "id": "s11",
+          "kicker": "CLAIMS",
+          "title": "Claims Center Views",
+          "blocks": [
+            {
+              "type": "Sub",
+              "id": "s11a",
+              "kicker": "CLAIMS CENTER · CLAIMS — BATCH VIEW",
+              "text": "Claims — Batch View"
+            },
+            {
+              "type": "P",
+              "text": "The Claims Batch View provides a consolidated view of all claim batches submitted to the clearinghouse. Each row represents a single batch — a grouped file of claims transmitted together — giving you visibility into transmission status, the claims contained, and the automation outcome for each batch."
+            },
+            {
+              "type": "Img",
+              "src": "images/p32-1.jpg",
+              "cap": "Claims Batch View"
+            },
+            {
+              "type": "L",
+              "text": "KEY FEATURES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Batch E5 ID: Each batch is assigned a unique Batch E5 ID. Clicking it opens the full transaction detail for that batch.",
+                "Total Claims in Batch: Clickable link (e.g. ‘15 Claims’) that navigates directly to those claim records in the Claims Status View.",
+                "Documents (Docs): The paperclip icon indicates files exported from the source system are available. Only present when the automation accessed and downloaded a batch file.",
+                "Batch Parsing: A visual indicator (not clickable) confirming the automation successfully parsed the batch file to extract claim data for downstream processing."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY — CLAIMS BATCH VIEW"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Batch E5 ID",
+                  "Unique internal NEOS identifier for this batch. Clickable — opens full batch transaction detail."
+                ],
+                [
+                  "Batch File Name",
+                  "The name of the batch file transmitted to the clearinghouse (e.g. an 837 file)."
+                ],
+                [
+                  "Batch ID",
+                  "The clearinghouse-assigned identifier for the submitted batch."
+                ],
+                [
+                  "Agency",
+                  "The home health or hospice agency associated with this batch."
+                ],
+                [
+                  "Claim Initiation Date",
+                  "The date the claims within this batch were initiated in NEOS."
+                ],
+                [
+                  "Submission Time",
+                  "The date and time the batch was transmitted to the clearinghouse."
+                ],
+                [
+                  "Total Claims in Batch",
+                  "Number of individual claims in this batch. Clickable — navigates to those specific claim records."
+                ],
+                [
+                  "Service Line",
+                  "The service line associated with the claims (e.g. Hospice, Home Health)."
+                ],
+                [
+                  "Type",
+                  "The claim type for the batch (e.g. Per Diem, Episodic)."
+                ],
+                [
+                  "Bill Type",
+                  "The billing type of claims in this batch (NOE, NOTR, NOA, or Claims)."
+                ],
+                [
+                  "Gateway",
+                  "The clearinghouse or transmission gateway used (e.g. Waystar)."
+                ],
+                [
+                  "AT Status",
+                  "Automation status for this batch transaction."
+                ],
+                [
+                  "Batch Status",
+                  "The clearinghouse response (Accepted, Rejected, or Exception)."
+                ],
+                [
+                  "Batch Parsing",
+                  "Visual indicator confirming the batch file was successfully parsed. Not clickable."
+                ],
+                [
+                  "Docs",
+                  "Indicates source system documents are available. Clickable — opens the Document panel."
+                ],
+                [
+                  "Reviewed?",
+                  "Checkbox to mark a batch as reviewed. Once checked, drops off Review Mode."
+                ]
+              ]
+            },
+            {
+              "type": "Sub",
+              "id": "s11b",
+              "kicker": "CLAIMS CENTER · DOCUMENT PANEL",
+              "text": "Document Panel"
+            },
+            {
+              "type": "P",
+              "text": "Clicking the Docs icon on any batch row opens the Document panel — a sliding panel showing all files associated with that batch. The panel displays the batch name, batch ID, and total claim count, and is divided into two tabs: Attachments and Extraction Details."
+            },
+            {
+              "type": "L",
+              "text": "ATTACHMENTS TAB"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Claims Batch File: The original batch file (e.g. an 837 file) with options to Download or View.",
+                "EHR Data Export: An .xlsx spreadsheet and a .pdf print grid — both downloadable. Contain claim data extracted from the EHR for this batch.",
+                "Download All: Downloads all available files for the batch in a single action."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/p34-1.jpg",
+              "cap": "Document panel — Attachments tab",
+              "maxH": "460px"
+            },
+            {
+              "type": "Note",
+              "kind": "note",
+              "text": "Documents are only available when the automation workflow accessed and downloaded a batch file. If claims were transmitted via direct integration, no documents will be present."
+            },
+            {
+              "type": "Sub",
+              "id": "s11c",
+              "kicker": "CLAIMS CENTER · CLAIMS STATUS VIEW",
+              "text": "Claims Status View"
+            },
+            {
+              "type": "P",
+              "text": "The Claims Status View provides a patient-level consolidated view of all claims, showing each patient's claim records alongside their full pipeline status — from clearinghouse through to payor. This is your primary working view for monitoring individual claim outcomes and taking action on records that need attention."
+            },
+            {
+              "type": "Img",
+              "src": "images/p35-1.jpg",
+              "cap": "Claims Status View"
+            },
+            {
+              "type": "L",
+              "text": "THREE-STAGE STATUS BAR"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "All Patients",
+                  "Total count of all claim records in the selected date range."
+                ],
+                [
+                  "Clearing House — Accepted",
+                  "Claims received and validated by the clearinghouse."
+                ],
+                [
+                  "Clearing House — Rejected",
+                  "Claims that failed clearinghouse validation and were not forwarded to the payor."
+                ],
+                [
+                  "Pre-Payor — Pending",
+                  "Claims awaiting acceptance by the payor."
+                ],
+                [
+                  "Pre-Payor — Accepted / Rejected",
+                  "Intermediary acceptance or rejection before reaching the payor."
+                ],
+                [
+                  "Payor — Pending",
+                  "Claims submitted to the payor awaiting a response."
+                ],
+                [
+                  "Payor — Accepted",
+                  "Payor has accepted the claim for payment."
+                ],
+                [
+                  "Payor — Rejected",
+                  "Payor has rejected the claim."
+                ],
+                [
+                  "Payor — Exceptions",
+                  "Claims requiring intervention as the status is not in scope or claim hit an outlier scenario."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY — CLAIMS STATUS VIEW"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Patient Name",
+                  "Full name of the patient. Clickable — opens the Patient Detail Screen."
+                ],
+                [
+                  "MRN",
+                  "Medical Record Number assigned to the patient."
+                ],
+                [
+                  "Agency",
+                  "The home health or hospice agency responsible for the patient's care."
+                ],
+                [
+                  "Br",
+                  "Branch code for the agency branch associated with this patient."
+                ],
+                [
+                  "Claim ID",
+                  "The unique identifier assigned to this claim record."
+                ],
+                [
+                  "Bill Type",
+                  "The billing type of the claim (NOE, NOTR, NOA, or Claims)."
+                ],
+                [
+                  "Service Line",
+                  "The type of service associated with this claim (e.g. Hospice, Home Health)."
+                ],
+                [
+                  "Batch File Name",
+                  "The name of the batch file in which this claim was transmitted."
+                ],
+                [
+                  "Payor Source",
+                  "The payor or insurance provider for this patient."
+                ],
+                [
+                  "GW",
+                  "Gateway — the clearinghouse used to submit this claim."
+                ],
+                [
+                  "Claim Charge Amt",
+                  "The total charge amount associated with this claim."
+                ],
+                [
+                  "SOC Date",
+                  "Start of Care date for the patient."
+                ],
+                [
+                  "EOHB Date",
+                  "Election of Hospice Benefit date — when the patient elected hospice care."
+                ],
+                [
+                  "Discharge Date",
+                  "The date of the patient's discharge, where applicable."
+                ],
+                [
+                  "Claim Init. Date",
+                  "The date this claim was initiated in NEOS."
+                ],
+                [
+                  "Submission Date",
+                  "The date this claim was submitted to the clearinghouse."
+                ],
+                [
+                  "Timely Filing Due Date",
+                  "The deadline by which this claim must be submitted to meet timely filing requirements."
+                ],
+                [
+                  "Timely Filing",
+                  "Icon indicator showing whether the claim was submitted within the required timely filing window."
+                ],
+                [
+                  "EHR Sync",
+                  "Indicates whether the claim status has been successfully written back to the EHR system."
+                ],
+                [
+                  "AT Status",
+                  "Automation status for this claim transaction."
+                ],
+                [
+                  "Claim Status",
+                  "Current status of the claim in the pipeline (e.g. CH Accepted, Payor Pending, Payor Rejected)."
+                ],
+                [
+                  "Action",
+                  "View Details link — opens the full Patient Detail Screen."
+                ],
+                [
+                  "Reviewed?",
+                  "Checkbox to mark the record as reviewed. Once checked, drops off Review Mode."
+                ]
+              ]
+            },
+            {
+              "type": "Sub",
+              "id": "s11d",
+              "kicker": "CLAIMS CENTER · PATIENT DETAIL SCREEN",
+              "text": "Patient Detail Screen — Claims Info"
+            },
+            {
+              "type": "P",
+              "text": "The Patient Detail Screen provides a comprehensive view of an individual patient's claim history and status. Access it by clicking the patient name in the Claims Status View or via the View Details link on any claim record."
+            },
+            {
+              "type": "P",
+              "text": "The screen is shared between Claims and Authorization — use the Claims Info tab for claims data and the Authorization Info tab for authorization records. An Automation Log link in the top right provides access to all automation transactions for this patient."
+            },
+            {
+              "type": "Img",
+              "src": "images/p37-1.jpg",
+              "cap": "Patient Detail Screen — Claims Info tab"
+            },
+            {
+              "type": "L",
+              "text": "CLAIM RECORD — SUMMARY ROW"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Claim Number",
+                  "The unique claim identifier for this record."
+                ],
+                [
+                  "Claim Init. Date",
+                  "The date the claim was initiated in NEOS."
+                ],
+                [
+                  "Claim Subm. Date",
+                  "The date the claim was submitted to the clearinghouse."
+                ],
+                [
+                  "Claim Amount",
+                  "The total monetary amount associated with this claim."
+                ],
+                [
+                  "Bill Type",
+                  "The billing type (NOE, NOTR, NOA, or Claims)."
+                ],
+                [
+                  "Claim Type",
+                  "The type of claim (e.g. Institutional)."
+                ],
+                [
+                  "SOC",
+                  "Start of Care date for the patient episode."
+                ],
+                [
+                  "Claim Status",
+                  "Current status of the claim (e.g. CH Accepted, Payor Pending)."
+                ],
+                [
+                  "Payor Source",
+                  "The payor to whom this claim was submitted."
+                ],
+                [
+                  "Claims Filing Indicator",
+                  "Identifies the type of health insurance coverage or specific payor program receiving this claim (e.g. Medicare Part A, Medicare Part B, Medicaid, commercial insurance)."
+                ],
+                [
+                  "Remarks",
+                  "Any additional notes or comments associated with this claim record."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "EXPANDED DETAIL PANELS"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Timing & TAT Panel: Timely Filing Due Date, Submission Date, Payor Response Date, EOHB Date (hospice) or Admission Date (standard claims), Submission TAT (turnaround time from initiation to submission), and Payor Approval TAT (turnaround time from submission to payor response).",
+                "Subscriber Info: Subscriber Name, Member ID, Date of Birth, and Address.",
+                "Attending Provider Info: Provider Name, NPI, Tax ID, and Address.",
+                "Billing Provider Info: Billing agency name, Tax ID, Contact name, and Contact number."
+              ]
+            },
+            {
+              "type": "L",
+              "text": "SERVICE LINE DETAILS"
+            },
+            {
+              "type": "P",
+              "text": "For standard Claims, a Service Line Details section shows each procedure billed:"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Date of Service",
+                  "The date on which the service was provided."
+                ],
+                [
+                  "Procedure",
+                  "The procedure code billed (e.g. G0299, Q5001)."
+                ],
+                [
+                  "Procedure Description",
+                  "A description of the procedure (e.g. Home Health Service/Hospice of RN, Each 15 Minutes)."
+                ],
+                [
+                  "Charges",
+                  "The charge amount for this procedure line."
+                ],
+                [
+                  "Units",
+                  "The number of units billed for this procedure."
+                ],
+                [
+                  "Total Charges",
+                  "Total charge amount for this line (Charges × Units)."
+                ]
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "tip",
+              "text": "Service Line Details are only present on final Claims. NOE, NOTR, and NOA records will not display a service line breakdown."
+            }
+          ]
+        },
+        {
+          "id": "s12",
+          "kicker": "CLAIMS",
+          "title": "Claims — Frequently Asked Questions",
+          "toc": "Frequently Asked Questions",
+          "blocks": [
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "What is the difference between a Batch Rejection and a Payor Rejection?",
+                  [
+                    "A Batch Rejection means the entire batch was not successfully submitted or accepted by the clearinghouse — the claims never reached the payor or system of processing.",
+                    "A Payor Rejection means the batch was accepted by the clearinghouse and claims were forwarded to the payor, but the payor rejected them upon review.",
+                    "Batch Rejections should be investigated at the batch level in the Batch View. Payor Rejections require individual claim-level review in the Claims Status View."
+                  ]
+                ],
+                [
+                  "What is a Batch Exception versus a general Exception?",
+                  "A Batch Exception relates to an issue with the transmission of the batch file itself. A general Exception (visible in the Payor stage of the Claims Status View) relates to individual patient claim records within the claim statusing flow."
+                ],
+                [
+                  "What does Timely Filing mean and what should I do when I see an Untimely flag?",
+                  [
+                    "Timely Filing refers to the requirement that certain claim types must be submitted within a five-day window from the relevant event date.",
+                    "When you see an Untimely flag, review the record and take appropriate follow-up action. These items also appear in the Action Items panel on the dashboard."
+                  ]
+                ],
+                [
+                  "What is the Batch E5 ID and how is it different from a Claim ID?",
+                  "The Batch E5 ID is the unique internal NEOS identifier for a batch — tracking all automation transactions for that batch. The Claim ID is the identifier for an individual claim record within a batch."
+                ],
+                [
+                  "Why are there no documents showing for some batches in the Docs column?",
+                  "Documents are only available when the automation workflow accessed and downloaded a batch file during processing. If claims were transmitted via direct integration, no documents will be present."
+                ],
+                [
+                  "What does the Batch Parsing indicator mean?",
+                  "The Batch Parsing icon confirms the automation successfully downloaded and parsed the batch file to extract claim data into NEOS. It is not clickable."
+                ],
+                [
+                  "How do I find a specific patient's claim records?",
+                  "Use the Search Patient Records bar in the Claims Status View to search by patient name, MRN, Member ID, or Claim ID. Or click directly on a patient name to open their Patient Detail Screen."
+                ],
+                [
+                  "What should I do if I encounter a bug or something does not look right?",
+                  "Contact the Element5 support team via the Support icon within the application or by emailing support@e5.ai."
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
