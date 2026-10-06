@@ -1842,6 +1842,485 @@
           ]
         }
       ]
+    },
+    {
+      "id": "part5",
+      "kicker": "PART V",
+      "title": "Managing Pre-Claim Reviews (PCR) in NEOS",
+      "desc": "Submitting Pre-Claim Review requests, tracking DCN and UTN responses, and monitoring review decisions from Palmetto.",
+      "intro": [
+        {
+          "type": "Note",
+          "kind": "platform",
+          "text": "Review Mode, Sort & Filter, Automation Log, and Reporting all apply to this module — see Part II: Global Features for full guidance on each."
+        }
+      ],
+      "sections": [
+        {
+          "id": "s13",
+          "kicker": "PCR",
+          "title": "What is PCR in NEOS?",
+          "toc": "PCR Overview",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "Pre-Claim Review (PCR) is the Medicare review process in which a home health agency submits documentation for a patient's care to the Medicare Administrative Contractor (Palmetto) and receives a review decision before the final claim is billed."
+            },
+            {
+              "type": "P",
+              "text": "The PCR module in NEOS automates this lifecycle end to end — extracting the PCR data from HCHB, submitting it into Palmetto, capturing the Document Control Number (DCN) and Unique Tracking Number (UTN), and downloading the decision letter back into HCHB. PCR lives in its own top-level PCR tab, under the Pre-Claims Review Center."
+            },
+            {
+              "type": "H",
+              "text": "The PCR Automation Pipeline"
+            },
+            {
+              "type": "P",
+              "text": "Every PCR record moves through six automation stages. The stage a record is currently in is shown as the Current Stage in the Automation Log."
+            },
+            {
+              "type": "Cards",
+              "items": [
+                {
+                  "k": "STAGE 1",
+                  "t": "PCR data extraction from HCHB",
+                  "d": "The automation pulls the patient, episode, and benefit period data needed for the PCR from HCHB. Ineligible records are stopped here."
+                },
+                {
+                  "k": "STAGE 2",
+                  "t": "PCR Submission into Palmetto",
+                  "d": "The PCR request and its supporting documents are submitted into the Palmetto portal."
+                },
+                {
+                  "k": "STAGE 3",
+                  "t": "Extract and update DCN",
+                  "d": "The Document Control Number issued by Palmetto is captured and written back to the record."
+                },
+                {
+                  "k": "STAGE 4",
+                  "t": "Extract and update UTN",
+                  "d": "The Unique Tracking Number issued with the review is captured and written back to the record."
+                },
+                {
+                  "k": "STAGE 5",
+                  "t": "Download DL from Palmetto",
+                  "d": "Once Palmetto returns a decision, the automation downloads the decision letter (DL)."
+                },
+                {
+                  "k": "STAGE 6",
+                  "t": "Upload DL into HCHB",
+                  "d": "The decision letter is uploaded into HCHB and the decision status is finalized in NEOS."
+                }
+              ]
+            },
+            {
+              "type": "H",
+              "text": "Understanding Key Terms"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "PCR",
+                  "Pre-Claim Review — a review request submitted to Medicare before the final claim is billed."
+                ],
+                [
+                  "Palmetto",
+                  "The Medicare Administrative Contractor (MAC) portal where PCR requests are submitted and decided."
+                ],
+                [
+                  "DCN",
+                  "Document Control Number — issued by Palmetto once the PCR submission is received."
+                ],
+                [
+                  "UTN",
+                  "Unique Tracking Number — issued with the review and required on the final claim."
+                ],
+                [
+                  "DL",
+                  "Decision Letter — Palmetto's written review decision, downloaded and uploaded into HCHB."
+                ],
+                [
+                  "Benefit Period (BP)",
+                  "The period of care the PCR request covers. Each benefit period may require its own review."
+                ],
+                [
+                  "Submission Type",
+                  "Initial for a first-time request, or Re-Submitted when a previous request is resubmitted."
+                ]
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "tip",
+              "text": "A decision status (Affirmed, Partially-Affirmed, or Non-Affirmed) only appears once the record reaches the final stage, Upload DL into HCHB. Until then the record shows the latest pending status — Submitted, DCN received, or UTN received."
+            }
+          ]
+        },
+        {
+          "id": "s14",
+          "kicker": "PCR",
+          "title": "PCR View",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The PCR View provides a consolidated view of every PCR record, showing each patient's request alongside its decision status, DCN, UTN, and automation outcome. This is your primary working view for monitoring PCR decisions and acting on records that need attention."
+            },
+            {
+              "type": "P",
+              "text": "Access it by selecting the PCR tab in the main navigation, then the PCR View sub-tab in the Pre-Claims Review Center."
+            },
+            {
+              "type": "Img",
+              "src": "images/pcr-view.jpg",
+              "cap": "PCR View — Pre-Claims Review Center"
+            },
+            {
+              "type": "L",
+              "text": "KEY FEATURES"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "PCR Init Date: Filter the view by the date the PCR transaction was initiated. The date filter persists as you move between PCR views.",
+                "Add More Filters: Narrow records by additional fields such as payor, branch, and submission type.",
+                "Search Patient Records: Search by patient name, MRN, Medicare ID, DCN, or UTN.",
+                "Decision Status Summary: Clickable counts for every decision status — click any tile to filter the grid to that subset.",
+                "Automation (AT) Status row: Clickable counts for each automation outcome. Use the caret next to Needs Attention, Needs Intervention, and In Progress to narrow to specific reasons or sub-buckets.",
+                "Expandable rows: Expand a row to view the patient's previous review submissions.",
+                "Review Mode: Toggle Review Mode in the top right to focus only on records that still need your attention."
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/pcr-status.jpg",
+              "cap": "Decision Status Summary",
+              "maxH": "220px"
+            },
+            {
+              "type": "L",
+              "text": "DECISION STATUS — DEFINITIONS"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "All Records",
+                  "Total count of all PCR records in the selected date range."
+                ],
+                [
+                  "Pre-Submission",
+                  "The PCR has not yet been submitted to Palmetto. No DCN or UTN has been issued."
+                ],
+                [
+                  "Submitted",
+                  "The PCR has been submitted into Palmetto and is awaiting a DCN."
+                ],
+                [
+                  "DCN received",
+                  "Palmetto has issued a Document Control Number. The record is awaiting a UTN."
+                ],
+                [
+                  "UTN received",
+                  "A Unique Tracking Number has been issued. The review decision has not yet been returned."
+                ],
+                [
+                  "Partially-Affirmed",
+                  "Palmetto affirmed some, but not all, of the services in the request."
+                ],
+                [
+                  "Affirmed",
+                  "Palmetto affirmed the request. The UTN can be used on the final claim."
+                ],
+                [
+                  "Non-Affirmed",
+                  "Palmetto did not affirm the request. Review the decision letter and resubmit if appropriate."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "AUTOMATION (AT) STATUS — DEFINITIONS"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Completed",
+                  "The automation completed the full PCR lifecycle and the decision letter has been uploaded into HCHB."
+                ],
+                [
+                  "Needs Attention",
+                  "The automation stopped the transaction. Use the caret to filter by reason — Terminated (business exception) or Failed (technical exception)."
+                ],
+                [
+                  "Manually Terminated",
+                  "A user terminated the PCR while it was in progress. The note entered at termination is shown with the record."
+                ],
+                [
+                  "Needs Intervention",
+                  "The automation needs a user to correct data before it can continue — for example an ineligible record stopped at extraction from HCHB."
+                ],
+                [
+                  "In Progress",
+                  "The automation is actively working the record. Use the caret to filter by In Progress, Wait (waiting on the payor or an external system), or Terminating."
+                ]
+              ]
+            },
+            {
+              "type": "Img",
+              "src": "images/pcr-at-menu.jpg",
+              "cap": "Needs Attention reason breakdown",
+              "maxH": "420px"
+            },
+            {
+              "type": "L",
+              "text": "FIELD DICTIONARY — PCR VIEW"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "Patient Name",
+                  "Full name of the patient. Clickable — opens the patient detail drawer on the PCR Info tab."
+                ],
+                [
+                  "MRN",
+                  "Medical Record Number assigned to the patient in HCHB."
+                ],
+                [
+                  "BP Start Date",
+                  "Start date of the benefit period the PCR covers."
+                ],
+                [
+                  "Submission Type",
+                  "Initial or Re-Submitted."
+                ],
+                [
+                  "PCR Init Date",
+                  "The date the PCR transaction was initiated in NEOS."
+                ],
+                [
+                  "DCN",
+                  "Document Control Number issued by Palmetto."
+                ],
+                [
+                  "UTN",
+                  "Unique Tracking Number issued with the review."
+                ],
+                [
+                  "Decision status",
+                  "Current status of the PCR in the decision lifecycle."
+                ],
+                [
+                  "EHR Sync",
+                  "Indicates whether the PCR status has been successfully written back to HCHB."
+                ],
+                [
+                  "Docs",
+                  "Opens the documents attached to the request and received in response."
+                ],
+                [
+                  "AT Status",
+                  "Automation status for this PCR transaction. Needs Intervention and In Progress icons are clickable."
+                ],
+                [
+                  "Reviewed?",
+                  "Checkbox to mark the record as reviewed. Once checked, it drops off Review Mode."
+                ]
+              ]
+            },
+            {
+              "type": "L",
+              "text": "PREVIOUS REVIEW SUBMISSIONS"
+            },
+            {
+              "type": "P",
+              "text": "Expanding a row shows the patient's earlier review submissions with Episode Start Date, BP Start Date, Receipt Number, SOC Date, Discharge Date, Benefit Period Status, Billing Period Submitted, PCR Submission date, DCN Arrived date, UTN Arrived date, and DL Arrived date."
+            },
+            {
+              "type": "H",
+              "text": "PCR Documents"
+            },
+            {
+              "type": "P",
+              "text": "Click the Docs icon on any row to open the Documents panel for that PCR."
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Request Docs: Documents submitted with the PCR — the PCR sheet, OASIS, and Plan of Care.",
+                "Response Docs: Documents received from Palmetto — the Decision letter."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s15",
+          "kicker": "PCR",
+          "title": "Interventions, Terminate & Bulk Actions",
+          "toc": "Interventions & Bulk Actions",
+          "blocks": [
+            {
+              "type": "H",
+              "text": "Needs Intervention"
+            },
+            {
+              "type": "P",
+              "text": "When the automation cannot continue without user input, the record is marked Needs Intervention. Records stopped during PCR data extraction from HCHB stay in Pre-Submission until the data is corrected."
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Open the intervention — Click the Needs Intervention icon in the AT Status column to open the intervention panel. It shows the field, the current value, the reason, and the stage at which the automation stopped.",
+                "Correct the data in HCHB — Update the flagged information at its source in HCHB.",
+                "Confirm to continue — Return to NEOS and confirm the intervention. The automation resumes from the stage where it stopped."
+              ]
+            },
+            {
+              "type": "H",
+              "text": "Terminate a PCR"
+            },
+            {
+              "type": "P",
+              "text": "A PCR that the automation is still working (In Progress) can be terminated — for example when the patient was discharged before submission or the request was submitted in error."
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Open the terminate dialog — Click the In Progress icon in the AT Status column, or use Terminate PCR on the patient's PCR Info tab.",
+                "Review the details — The dialog shows the Benefit Period Start Date, PCR Init Date, and current status.",
+                "Add optional notes — Enter the reason for terminating. The note is kept with the record.",
+                "Click Terminate — The record shows Terminating while the automation shuts the transaction down, then moves to Needs Attention — Manually Terminated."
+              ]
+            },
+            {
+              "type": "Note",
+              "kind": "important",
+              "text": "If the PCR is part of a combined billing period submission, terminating it also terminates that entire submission."
+            },
+            {
+              "type": "H",
+              "text": "Bulk Actions"
+            },
+            {
+              "type": "P",
+              "text": "Use the Bulk Selection menu in the top right of the PCR View to act on many records at once."
+            },
+            {
+              "type": "Img",
+              "src": "images/pcr-bulk.jpg",
+              "cap": "Bulk Selection menu",
+              "maxH": "260px"
+            },
+            {
+              "type": "Bullets",
+              "items": [
+                "Bulk Terminate: Select multiple records and terminate them in one step. Only records the automation is still working — Needs Intervention or In Progress — can be selected; other rows are disabled.",
+                "Bulk Review: Select any visible records and mark them as reviewed in one step."
+              ]
+            },
+            {
+              "type": "Steps",
+              "start": 1,
+              "items": [
+                "Open Bulk Selection — Click Bulk Selection and choose Bulk Terminate or Bulk Review.",
+                "Select records — Check the records you want to include. Switching between Bulk Terminate and Bulk Review clears the selection.",
+                "Confirm — Click the action button and confirm. For Bulk Terminate, the same combined-billing-period warning applies."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s16",
+          "kicker": "PCR",
+          "title": "PCR Automation Log & Patient PCR Info",
+          "toc": "PCR Automation Log",
+          "blocks": [
+            {
+              "type": "P",
+              "text": "The PCR Automation Log lists every PCR automation transaction, with its E5 ID, current stage, patient details, billing and benefit period, start and end times, and status. Access it via the Automation Log sub-tab in the Pre-Claims Review Center."
+            },
+            {
+              "type": "Img",
+              "src": "images/pcr-autolog.jpg",
+              "cap": "PCR Automation Log"
+            },
+            {
+              "type": "Table",
+              "rows": [
+                [
+                  "E5 ID",
+                  "Unique internal identifier for the PCR transaction. Clickable — opens the patient's PCR Info with the Automation Log."
+                ],
+                [
+                  "Current Stage",
+                  "The pipeline stage the transaction is currently in (e.g. Upload DL into HCHB)."
+                ],
+                [
+                  "Billing Period",
+                  "The billing period number for the PCR."
+                ],
+                [
+                  "Benefit Period",
+                  "The benefit period number for the PCR."
+                ],
+                [
+                  "BP Start Date",
+                  "Start date of the benefit period."
+                ],
+                [
+                  "Start Time / End Time",
+                  "When the automation began and finished processing."
+                ],
+                [
+                  "Status",
+                  "Automation status — Completed, Needs Attention, Needs Intervention, or In Progress."
+                ]
+              ]
+            },
+            {
+              "type": "H",
+              "text": "Patient PCR Info"
+            },
+            {
+              "type": "P",
+              "text": "Click a patient name in the PCR View to open the patient detail drawer on the PCR Info tab. The drawer is shared with Eligibility and Authorization — switch between the Eligibility Info, Authorization Info, and PCR Info tabs. An Automation Log link in the top right shows every automation transaction for this patient."
+            },
+            {
+              "type": "L",
+              "text": "PCR FAQS"
+            },
+            {
+              "type": "Faq",
+              "items": [
+                [
+                  "Why don't I see a decision status for my record?",
+                  "A decision status only appears once the decision letter has been uploaded into HCHB. Until then the record shows Submitted, DCN received, or UTN received."
+                ],
+                [
+                  "What is the difference between a DCN and a UTN?",
+                  "The DCN is issued by Palmetto when the PCR submission is received. The UTN is issued with the review and is required on the final claim."
+                ],
+                [
+                  "What happens to a record I manually terminate?",
+                  "It shows Terminating while the automation shuts the transaction down, then moves to Needs Attention — Manually Terminated with the note you entered."
+                ],
+                [
+                  "Why can't I select some rows in Bulk Terminate?",
+                  "Only records the automation is still working — Needs Intervention or In Progress — can be terminated. Completed and Needs Attention records are disabled."
+                ],
+                [
+                  "Who do I contact if a PCR looks wrong?",
+                  "Contact the Element5 support team via the Support icon within the application or by emailing support@e5.ai."
+                ]
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
